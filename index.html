@@ -198,6 +198,91 @@
       </div>
     </div>
   </section>
+
+
+
+  <!-- -----------Compétences------- -->
+
+  <section class="ftco-section" id="skills-section" style="padding-bottom: 30px;">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-md-12 heading-section text-center ftco-animate">
+
+          <h2 class="mb-4">Mes compétence</h2>
+          <p>Mes compétences sont assez variées, je fais un peu de tout</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 animate-box">
+          <div class="progress-wrap ftco-animate">
+            <h3>Python</h3>
+            <div class="progress">
+              <div class="progress-bar color-1" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                aria-valuemax="100" style="width:90%; background: #ECD444 !important;">
+                <span>90%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 animate-box">
+          <div class="progress-wrap ftco-animate">
+            <h3>C++</h3>
+            <div class="progress">
+              <div class="progress-bar color-2" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                aria-valuemax="100" style="width:85%; background: #00BFB2">
+                <span>85%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 animate-box">
+          <div class="progress-wrap ftco-animate">
+            <h3>Conception 3D</h3>
+            <div class="progress">
+              <div class="progress-bar color-3" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                aria-valuemax="100" style="width:95%; background: #FF7733;">
+                <span>95%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 animate-box">
+          <div class="progress-wrap ftco-animate">
+            <h3>Web Design</h3>
+            <div class="progress">
+              <div class="progress-bar color-4" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                aria-valuemax="100" style="width:90%; background: #52489C;">
+                <span>90%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 animate-box">
+          <div class="progress-wrap ftco-animate">
+            <h3>Gestion de base de données</h3>
+            <div class="progress">
+              <div class="progress-bar color-5" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                aria-valuemax="100" style="width:70%">
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 animate-box">
+          <div class="progress-wrap ftco-animate">
+            <h3>Management et Gestion</h3>
+            <div class="progress">
+              <div class="progress-bar color-6" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                aria-valuemax="100" style="width:80%">
+                <span>80%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
   <section class="project py-5" id="project">
     <div class="container">
@@ -289,7 +374,7 @@
             <form action="" method="get">
               <div class="row">
                 <div class="col-lg-6 col-12">
-                  <input type="text" class="form-control" name="name" placeholder="Votre nom" id="name">
+                  <input type="text" class="form-control" name="name" placeholder="Votre nom" id="name" required>
                 </div>
 
                 <div class="col-lg-6 col-12">
@@ -298,11 +383,11 @@
 
                 <div class="col-12">
                   <textarea name="message" rows="6" class="form-control" id="message"
-                    placeholder="Votre message"></textarea>
+                    placeholder="Votre message" required></textarea>
                 </div>
 
                 <div class="ml-lg-auto col-lg-5 col-12">
-                  <input type="button" class="form-control submit-btn" value="Envoyer" id="bouton">
+                  <input type="submit" class="form-control submit-btn" value="Envoyer" id="bouton">
                 </div>
               </div>
             </form>
@@ -312,6 +397,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- FOOTER -->
   <footer class="footer py-5">
@@ -337,15 +423,17 @@
   <script src="js/smoothscroll.js"></script>
   <script src="js/custom.js"></script>
   <script>
-    var email = document.getElementById('email').nodeValue;
-    var name = document.getElementById('name').value;
-    var smso = document.getElementById('message').value;
-    var bouton = document.getElementById('bouton');
+
 
 
     bouton.addEventListener('click', () => {
-      //window.location.href = 'https://' + sam;
-      console.log(smso)
+
+      var email = document.getElementById('email').value;
+      var name = document.getElementById('name').value;
+      var smso = document.getElementById('message').value;
+      var bouton = document.getElementById('bouton');
+
+      window.location.href = `https://wa.me/+24107236972?text=${name} : ${smso}`;
     })
 
 
